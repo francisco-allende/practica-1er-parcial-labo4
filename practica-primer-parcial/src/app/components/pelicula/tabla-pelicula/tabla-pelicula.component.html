@@ -1,0 +1,9 @@
+<div class="pelis-container">
+    @for(peli of peliculas; track peli){
+        <div class="peli-item">
+            <img [src]=peli.fotoPelicula (click)="seleccionarPelicula(peli)" width="300px" height="300px" alt="foto pelicula {{peli.nombre}}"/>
+            <h3>{{peli.nombre}}</h3>
+        </div>
+    }
+</div>
+    

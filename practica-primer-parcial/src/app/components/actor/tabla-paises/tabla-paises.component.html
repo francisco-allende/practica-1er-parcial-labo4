@@ -1,0 +1,27 @@
+
+<div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="rounded">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>País</th>
+                  <th>Nacionalidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for(pais of paises; track pais){ 
+                  <tr>
+                    <td>{{ pais.name }}</td>
+                    <td><img [src]="pais.flag" (click)="seleccionarPais(pais)" alt="Bandera de {{pais.name}}" width="50px" height="50px" /></td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+</div>
+
+  

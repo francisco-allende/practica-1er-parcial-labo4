@@ -1,0 +1,48 @@
+<app-bienvenido>
+</app-bienvenido>
+<div class="my-container">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form [formGroup]="peliculaForm" (ngSubmit)="savePelicula()" >
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo:</label>
+                        <input type="text" class="form-control" id="tipo" formControlName="tipo">
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidadPublico">Cantidad de publico:</label>
+                        <input type="number" class="form-control" id="cantidadPublico" formControlName="cantidadPublico">
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaEstreno">Fecha de estreno:</label>
+                        <input type="text" class="form-control" id="fechaEstreno" formControlName="fechaEstreno">
+                    </div>
+                    <div class="form-group">
+                        <label for="fotoPelicula">URL Foto:</label>
+                        <input type="text" class="form-control" id="fotoPelicula" formControlName="fotoPelicula">
+                    </div>
+                    <div class="form-group">
+                        <label for="actorPelicula">Actor:</label>
+                        <input type="text" class="form-control" id="actorPelicula" formControlName="actorPelicula">
+                    </div>
+                    <br>
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <br>
+                <app-actor-listado (actorSeleccionadoEvent)="handlerActorSeleccionado($event)"></app-actor-listado>
+            </div>
+        </div>
+    </div>
+</div>
+
+

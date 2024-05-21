@@ -1,0 +1,20 @@
+<!--
+    El padre es un mero contenedor que negocia entre ambos componentes hijo, ya que el conoce a los dos
+        1) tabla pelicula emite un evento "peliculaSeleccionadaEvent" con la peli seleccionada como parametro.
+        2) peli-listado, el padre, escucha el evento y dentro del handler carga la peli a una var local  
+        3) cargada la data, el hijo detalle-peli recibe la var peli-seleccionada del padre
+
+    todo esto se activa solo con el emit del evento y los handlers. la magia de angular
+
+    aparte, el padre le pasa el array a la tabla. si lo hago desde la tabla es lo mismo
+
+    tanto para eventos, como para variables: a la derecha del =, el padre
+                                             a la izquierda del =, el hijo 
+
+-->
+<app-bienvenido>
+</app-bienvenido>
+    <div class="my-container">
+        <app-tabla-pelicula (peliculaSeleccionadaEvent)="handlerPeliculaSeleccionada($event)" [peliculas]="arrPeliculas"></app-tabla-pelicula>
+        <app-detalle-pelicula [peliculaADetallar]="peliculaSeleccionada"></app-detalle-pelicula>
+    </div>

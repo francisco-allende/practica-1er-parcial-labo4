@@ -1,0 +1,19 @@
+@if(peliculaADetallar){
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ peliculaADetallar.nombre }}</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><strong>Tipo:</strong> {{ peliculaADetallar.tipo }}</li>
+                  <li class="list-group-item"><strong>Fecha de estreno:</strong> {{ peliculaADetallar.fechaEstreno }}</li>
+                  <li class="list-group-item"><strong>Cantidad de público:</strong> {{ peliculaADetallar.cantidadPublico }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+}
+  

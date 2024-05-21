@@ -1,0 +1,13 @@
+
+  
+  img {
+    margin: 10px; 
+    border: 2px solid transparent; 
+    transition: border-color 0.3s ease; 
+  }
+  
+  img:hover {
+    cursor: pointer;
+    border-color: #333; 
+  }
+  

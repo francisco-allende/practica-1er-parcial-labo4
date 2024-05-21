@@ -1,9 +1,36 @@
 <div class="pelis-container">
-    @for(peli of peliculas; track peli){
-        <div class="peli-item">
-            <img [src]=peli.fotoPelicula (click)="seleccionarPelicula(peli)" width="300px" height="300px" alt="foto pelicula {{peli.nombre}}"/>
-            <h3>{{peli.nombre}}</h3>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="rounded">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Afiche</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for(peli of peliculas; track peli){ 
+                    <tr>
+                      <td>{{peli.nombre}}</td>
+                      <td>
+                        <img [src]=peli.fotoPelicula 
+                            (click)="seleccionarPelicula(peli)" 
+                            width="80px" 
+                            height="80px" 
+                            alt="foto pelicula {{peli.nombre}}"
+                        />
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-    }
+    </div>
 </div>
     
+
+

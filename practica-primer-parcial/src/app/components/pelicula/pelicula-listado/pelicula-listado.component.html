@@ -12,9 +12,7 @@
                                              a la izquierda del =, el hijo 
 
 -->
-<app-bienvenido>
-</app-bienvenido>
-    <div class="my-container">
-        <app-tabla-pelicula (peliculaSeleccionadaEvent)="handlerPeliculaSeleccionada($event)" [peliculas]="arrPeliculas"></app-tabla-pelicula>
-        <app-detalle-pelicula [peliculaADetallar]="peliculaSeleccionada"></app-detalle-pelicula>
-    </div>
+<div class="my-container">
+    <app-tabla-pelicula (peliculaSeleccionadaEvent)="handlerPeliculaSeleccionada($event)" [peliculas]="arrPeliculas"></app-tabla-pelicula>
+    <app-detalle-pelicula [peliculaADetallar]="peliculaSeleccionada"></app-detalle-pelicula>
+</div>

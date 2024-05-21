@@ -1,0 +1,8 @@
+:host {
+    display: block;
+    width: 100%;
+    flex: 1; /* Ocupará el espacio disponible dentro del contenedor padre */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente, por ejemplo */
+    /* Otros estilos que necesites */
+  }
+  

@@ -1,3 +1,13 @@
+.actores-container{
+    color: black;
+    background-color: rgb(240, 211, 158);
+    padding: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
 .card-actor{
     padding:  2em;
     width: 100px;
@@ -5,15 +15,6 @@
     color: black;
 }
 
-.actores-container{
-    background-color: lightskyblue;
-    color: black;
-    padding: 2em;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.card-actor{
+td:hover{
     cursor: pointer;
 }

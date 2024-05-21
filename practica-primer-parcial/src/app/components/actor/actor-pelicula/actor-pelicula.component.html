@@ -1,1 +1,4 @@
-<p>actor-pelicula works!</p>
+<div class="my-container">
+    <app-actor-listado (actorSeleccionadoEvent)="handlerActorSeleccionado($event)"></app-actor-listado>
+    <app-detalle-actor [actorADetallar]="actorSeleccionado" ></app-detalle-actor>
+</div>

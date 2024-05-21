@@ -10,7 +10,7 @@ import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-busqueda',
   standalone: true,
-  imports: [TablaPeliculaComponent, DetallePeliculaComponent, ActorListadoComponent, ActorAltaComponent],
+  imports: [],
   templateUrl: './busqueda.component.html',
   styleUrl: './busqueda.component.css'
 })

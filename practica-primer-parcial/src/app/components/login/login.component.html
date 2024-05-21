@@ -1,5 +1,33 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()">
-    <input type="text" formControlName="user">
-    <input type="password" formControlName="password">
-    <button type="submit">Ingresar</button>
-</form>
+@if(loginUser.email == '' || loginUser.password == ''){
+<div class="container-fluid vh-100 m-0 p-0">
+    <div class="row justify-content-center align-items-top h-100 form-container">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Ingrese su usuario</h1>
+                    <br>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+                        </div>
+                        <div class="login-btns">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success btn-block" (click)="login()">Iniciar Sesión</button>
+                            </div>
+                            <div class="form-group">
+                                    <button  class="btn btn-info btn-block"  (click)="hardcode('admin')">Admin</button>
+                            </div>
+                            <div class="form-group">
+                                <button  class="btn btn-info btn-block" (click)="hardcode('empleado')">Empleado</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
